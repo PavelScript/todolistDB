@@ -108,6 +108,8 @@ app.post("/delete", function(req, res){
     })};
 
   });
+
+
 app.get("/:customListName", (req,res) => {
   const customListName = req.params.customListName;
 
@@ -115,7 +117,6 @@ app.get("/:customListName", (req,res) => {
     if(!foundList){
       const list = new List ({
         name: customListName,
-        items: defaultItems
       });
       
       list.save();
